@@ -34,8 +34,8 @@ const int digits[] = {
   0b0000000000000001
 };
 
-const char* ssid       = "maxed";
-const char* password   = "LELThisPasswordWillproTectMeFromH4ckors";
+const char* ssid       = "clubpenguin_hotpot";
+const char* password   = "plsBringItBack";
 
 short hour = 0;
 short minute = 0;
@@ -48,6 +48,8 @@ void setup() {
   pinMode(sh_latch, OUTPUT);
   pinMode(sh_clock, OUTPUT);
   pinMode(sh_data, OUTPUT);
+
+  shiftOutInt(numbers[0] | digits[0]);
 
   Serial.begin(115200);
   WiFi.begin(ssid, password);
